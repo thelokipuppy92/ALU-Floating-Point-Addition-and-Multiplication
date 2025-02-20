@@ -1,28 +1,33 @@
-# **Floating Point Addition and Multiplication Unit**
+# **IEEE 754 Floating Point Addition and Multiplication Unit**
 
 ## **Introduction**
 
 ### **1.1 Context**
 
-The main objectives of this module are to explore the need for floating-point numbers, their standard representation, and how various floating-point arithmetic operations (addition, subtraction, multiplication, etc.) are carried out. 
+The goal of this project is to design, implement, and test two fundamental operations—**addition** and **multiplication**—on floating-point numbers using the **IEEE 754 single-precision 32-bit format**. 
 
-Floating-point representation allows for the support of a wider range of values than fixed-point or integer representations. The core arithmetic functions used in this system are summation, subtraction, multiplication, and division. In this floating-point unit, input values are provided in IEEE-754 format, specifically using 32-bit single-precision floating-point numbers.
+Unlike traditional integer or fixed-point arithmetic, floating-point operations allow for more precise handling of very large or very small numbers. This floating-point unit (FPU) will process operations on single-precision floating-point numbers, adhering to the IEEE 754 standard.
 
-The application of this floating-point arithmetic unit is located within the math coprocessor, designed to handle floating-point calculations efficiently.
+This project focuses on the design and implementation of the arithmetic unit that performs floating-point addition and multiplication efficiently. The FPU is designed to be used in a **math coprocessor** for applications requiring floating-point calculations.
 
 ### **1.2 Objectives**
 
-The primary goal is to design a floating-point arithmetic unit (ALU) using VHDL and integrate it into a Xilinx Vivado project. A testbench has been included for simulation purposes to validate the functionality of the unit. 
+The floating-point arithmetic unit (FPU) will be designed in **VHDL** and included in a **Xilinx Vivado Project**. A **testbench** will also be provided to simulate and validate the functionality of the unit. 
 
-The design approach follows a **Bottom-up design methodology**, where simpler logic blocks such as **Comparator**, **Adder**, **Shifter**, and others are implemented first, before progressing to the final integration of the arithmetic unit.
+The design follows a **bottom-up** approach:
+- Initial components such as **comparator**, **adder**, **multiplier**, and **shifter** are designed first.
+- These components are then integrated to implement the complete floating-point arithmetic unit.
+
+The focus of the project is on implementing these operations with **IEEE-754 single precision** (32-bit) floating-point format.
 
 ---
 
 ### **Features**
 
-- **IEEE-754 Single Precision**: Implements arithmetic operations using 32-bit IEEE-754 standard for single-precision floating-point numbers.
-- **VHDL Implementation**: The unit is written in VHDL and is integrated into a Xilinx Vivado project.
-- **Simulation**: A testbench is provided to simulate and validate the design before implementation on hardware.
+- **IEEE-754 Single Precision**: Supports 32-bit single-precision floating-point operations (addition and multiplication).
+- **VHDL Design**: The floating-point unit is designed using **VHDL** and included in a **Xilinx Vivado** project.
+- **Testbench**: A testbench is provided for simulation and functional verification.
+- **Math Coprocessor Integration**: The arithmetic unit can be integrated into a math coprocessor to handle floating-point calculations in larger systems.
 
 ---
 
@@ -30,20 +35,17 @@ The design approach follows a **Bottom-up design methodology**, where simpler lo
 
 To get started with the project:
 1. Clone the repository.
-2. Open the project in **Xilinx Vivado**.
-3. Simulate the unit using the provided testbench.
-4. Implement the design on the FPGA (optional).
+2. Open the **Xilinx Vivado Project** in Vivado.
+3. Simulate the design using the provided testbench.
+4. Optionally, implement the design on an FPGA for hardware testing.
 
 ---
 
 ### **How to Run Simulation**
 
-1. Open Vivado and load the project.
-2. Compile the design and run the simulation using the provided testbench.
-3. Observe the waveform outputs to validate the functionality of the floating-point operations.
+1. Open **Vivado** and load the project.
+2. Compile the design to ensure there are no errors.
+3. Run the simulation using the provided testbench.
+4. Observe the waveforms to verify the correctness of the floating-point addition and multiplication operations.
 
----
 
-### **Contributing**
-
-Feel free to fork the project, submit issues, or pull requests for improvements or fixes.
