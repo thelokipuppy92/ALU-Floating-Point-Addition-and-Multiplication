@@ -1,4 +1,4 @@
-# **Floating Point Addition and Subtraction Unit**
+# **Floating Point Addition and Multiplication Unit**
 
 ## **Introduction**
 
